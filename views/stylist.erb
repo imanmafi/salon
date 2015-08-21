@@ -1,0 +1,12 @@
+<h1><a href="/">Salon</a></h1>
+<h2><%= @stylist.name %></h2>
+<% if @stylist.clients.any? %>
+<ul>
+  <% @stylist.clients.each do |client| %>
+  <li><%= client.name %></li>
+  <% end %>
+</ul>
+<% else %>
+<p>This stylist has no clients yet.</p>
+<% end %>
+<p><a href="/stylists/<%= @stylist.id() %>/edit">Edit <%= @stylist.name() %></a></p>

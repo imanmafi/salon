@@ -1,0 +1,32 @@
+<h1><a href="/">Salon LeRuby</a></h1>
+<form action="/stylists" method="post">
+  <label for="name">Stylist name</label>
+  <input id="name" name="name" type="text">
+  <button type="submit" class="btn">Add stylist</button>
+</form>
+<br>
+<br>
+<p>Add clients to a stylist:</p>
+<form action="/clients" method="post">
+<label for="stylist_id">Select a Stylist</label>
+  <select id='stylist_id' name='stylist_id' type='text'>
+    <% @stylists.each do |stylist| %>
+      <option value="<%= stylist.id()%>"> <%= stylist.name() %> </option>
+    <% end %>
+  </select>
+<br>
+  <label for="client_name">Client name</label>
+  <input id="client_name" name="client_name" type="text">
+  <button type="submit" class="btn">Add client</button>
+</form>
+<br>
+<% if @stylists.any? %>
+  <p>Click on a stylist to view all clients</p>
+  <ul>
+    <% @stylists.each do |stylist| %>
+    <li><a href="/stylists/<%= stylist.id %>"><%= stylist.name %></a></li>
+    <% end %>
+  </ul>
+    <% else %>
+  <p>There are no stylists added yet.</p>
+<% end %>
