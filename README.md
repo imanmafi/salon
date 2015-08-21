@@ -29,7 +29,7 @@ The `clients` table is comprised of `id`, `name`, and `stylist_id` columns.
 ## Database Setup
 ```
 CREATE DATABASE salon;
-\c hair_salon
+\c salon
 CREATE TABLE stylists (id serial PRIMARY KEY, name varchar);
 CREATE TABLE clients (id serial PRIMARY KEY, name varchar, stylist_id int);
 CREATE DATABASE salon_test WITH TEMPLATE salon;
