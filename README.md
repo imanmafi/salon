@@ -6,13 +6,13 @@ A Ruby app that creates Stylist and Client classes. Each Stylist or Client objec
 ```
 Assuming that you have Ruby installed in the terminal:
 
-`test_stylist = Stylist.new("Michelle")`
+test_stylist = Stylist.new("Michelle")
 
-`test_client = Client.new("Sara")`
+test_client = Client.new("Sara")
 
-`test_stylist.update("Mary")` => updates stylist name
+test_stylist.update("Mary") => updates stylist name
 
-`test_stylist.delete` => deletes stylist and corresponding clients from the database
+test_stylist.delete => deletes stylist and corresponding clients from the database
 ```
 ## Tests
 
@@ -50,4 +50,3 @@ CREATE DATABASE salon_test WITH TEMPLATE salon;
 ## License
 
 MIT License, copyright 2015. 
-```
