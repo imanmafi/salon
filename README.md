@@ -1,4 +1,5 @@
-# Salon LeRuby [![Build Status]] [![Dependency Status]]
+# Salon LeRuby 
+[![Build Status]] [![Dependency Status]]
 
 A Ruby app that creates Stylist and Client classes. Each Stylist or Client object is capable of holding a name and a unique id. Each Stylist object can be connected with an unlimited number Client objects. Each Client object may only be associated with one Stylist object.
 
